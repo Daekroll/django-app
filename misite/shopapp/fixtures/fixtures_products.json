@@ -1,0 +1,80 @@
+[
+  {
+    "model": "shopapp.product",
+    "pk": 5,
+    "fields": {
+      "name": "Desktop",
+      "description": "",
+      "price": "2999.00",
+      "discount": 0,
+      "create_date": "2024-11-04T11:55:54.800Z",
+      "is_archive": false,
+      "created_by": 1
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 6,
+    "fields": {
+      "name": "Smartphone",
+      "description": "Lorem ipsum dolor sit",
+      "price": "999.00",
+      "discount": 0,
+      "create_date": "2024-11-04T11:55:54.806Z",
+      "is_archive": false,
+      "created_by": 1
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 7,
+    "fields": {
+      "name": "Laptop",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At consequuntur esse exercitationem ipsum, iure saepe suscipit tempora ullam. Ea illum maxime mollitia neque nostrum quam sit tempore! Consectetur delectus deserunt dolores maiores molestiae provident repudiandae sapiente. Eum eveniet fugit maiores nostrum omnis perferendis sapiente totam unde veritatis voluptatibus. Amet, assumenda atque autem dicta dignissimos doloremque, ducimus incidunt laboriosam necessitatibus nemo quo quod rem reprehenderit similique voluptate. Ab aliquam asperiores, aut cumque deleniti dolorum eaque esse iure, labore magnam minus nobis non numquam, officiis possimus quis reprehenderit rerum similique tempora tempore velit veniam voluptate? Cumque deleniti esse inventore magni quasi. Architecto consectetur culpa doloribus est, eveniet, facilis ipsam libero minus odit porro provident quam quis rerum, sit suscipit tempora voluptate? Fugiat labore maiores minima necessitatibus quasi quis quisquam reprehenderit sequi similique! Dolorum harum illum inventore itaque maxime molestias nam natus nesciunt perferendis perspiciatis quasi quia, sed, sit soluta tempore unde velit! Accusamus aspernatur consequuntur odio possimus quasi! Accusamus amet maxime molestias neque qui recusandae saepe sequi voluptas. Adipisci alias eligendi exercitationem illum laudantium maiores nam placeat quo quod reiciendis, rem suscipit ut voluptatibus? Beatae consectetur ea eaque, eos illum iure laborum maiores nemo rem veniam. Eos fugit illo minima officiis quasi?",
+      "price": "1999.00",
+      "discount": 0,
+      "create_date": "2024-11-04T12:09:06.703Z",
+      "is_archive": true,
+      "created_by": 1
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 8,
+    "fields": {
+      "name": "lapot`",
+      "description": "Super modniy podcradul",
+      "price": "9000.00",
+      "discount": 0,
+      "create_date": "2024-11-08T09:49:29.403Z",
+      "is_archive": false,
+      "created_by": 1
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 9,
+    "fields": {
+      "name": "laptop1",
+      "description": "New laptop",
+      "price": "1000.00",
+      "discount": 0,
+      "create_date": "2024-11-11T15:56:38.887Z",
+      "is_archive": true,
+      "created_by": 1
+    }
+  },
+  {
+    "model": "shopapp.product",
+    "pk": 10,
+    "fields": {
+      "name": "OlegTest",
+      "description": "123",
+      "price": "123.00",
+      "discount": 123,
+      "create_date": "2024-11-12T14:31:05.059Z",
+      "is_archive": true,
+      "created_by": 2
+    }
+  }
+]

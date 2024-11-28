@@ -1,0 +1,27 @@
+{% extends 'shopapp/base.html' %}
+
+
+{% block title %}
+Product list
+{% endblock %}
+
+{% block body %}
+
+    <h1>Product list:</h1>
+    <ol>
+
+        {% for product in product_list %}
+            <li><a href="{% url 'shopapp:product_detail' pk=product.id %}">{{ product.name }}</a> for ${{ product.price }}</li>
+        {% endfor %}
+
+    </ol>
+
+{% if perms.shopapp %}
+    {% if perms.shopapp.add_product %}
+        <a href="{% url 'shopapp:create_product' %}">create_product</a>
+    {% endif %}
+{% endif %}
+
+
+
+{% endblock %}

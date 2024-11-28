@@ -1,0 +1,10 @@
+<h1>Urls list:</h1>
+<div style="display: flex; gap: 15px">
+    <div><a style="text-decoration: none; color: brown" href="{% url 'shopapp:product_list'  %}">Product list</a></div>
+    <div><a style="text-decoration: none; color: brown" href="{% url 'shopapp:order_list'  %}">Order list</a></div>
+    <div><a style="text-decoration: none; color: brown" href="{% url 'shopapp:index'  %}">Test url</a></div>
+    <div><a style="text-decoration: none; color: brown" href="{% url 'shopapp:create_order' %}">create_order</a></div>
+    <div><a style="text-decoration: none; color: brown" href="{% url 'myauth:about' pk=user.pk %}">About</a></div>
+    <div><a style="text-decoration: none; color: brown" href="{% url 'myauth:profiles' %}">Profiles</a></div>
+    <div><a style="text-decoration: none; color: brown" href="{% url 'myauth:logout' %}">Выйти</a></div>
+</div>

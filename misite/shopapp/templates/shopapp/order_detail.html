@@ -1,0 +1,39 @@
+{% extends 'shopapp/base.html' %}
+
+
+{% block title %}
+Order {{ object.id }}
+{% endblock %}
+
+{% block body %}
+<p>Order by:{{ object.user }}</p>
+<p>Address:{{ object.address }}</p>
+{% if object.promocode %}
+    Promocode: {{ object.promocode }}
+{% else %}
+    <p>Promocode: No promocode</p>
+{% endif %}
+{% if object.comment %}
+    Comment: {{ object.comment }}
+{% else %}
+    <p>No Comment</p>
+{% endif %}
+<p>Products: </p>
+<ul>
+    {% if object.products.all %}
+        {% for product in object.products.all %}
+    <li>
+        {{ product.name }}
+    </li>
+    {% endfor %}
+
+    {% else %}
+        <p>
+            No products yet
+        </p>
+    {% endif %}
+</ul>
+<a href="{% url 'shopapp:order_list' %}">Back to order list</a><br>
+<a href="{% url 'shopapp:order_update' pk=object.pk %}">Update order</a><br>
+<a href="{% url 'shopapp:order_delete' pk=object.pk %}">Delete order</a>
+{% endblock %}

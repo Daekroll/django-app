@@ -1,0 +1,35 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+Shop Index
+{% endblock %}
+
+{% block body %}
+<div>
+    <h1>Hello Shop Index!</h1>
+</div>
+
+
+<div>
+    <ul>
+        {% for name, price in products %}
+        <li>
+            {{ name | lower }} for $ {{ price | add:1 }} {{ products | last }}
+        </li>
+        {% if name|length_is:'6' %}
+        <p>laptop</p>
+        {% endif %}
+
+
+        {% empty %}
+        No products here
+        {%endfor%}
+    </ul>
+</div>
+<div>
+    Time running: {{ time_running }}
+</div>
+<div>
+    {% lorem 3 p random %}
+</div>
+{% endblock %}

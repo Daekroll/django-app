@@ -1,0 +1,34 @@
+{% extends 'shopapp/base.html' %}
+{% load cache %}
+
+{% block title %}
+    User's orders
+{% endblock %}
+
+
+{% block body %}
+    {% if orders %}
+        <h1>User {% firstof current_user.first_name current_user.username %} create next orders </h1>
+        {% cache 300 user_orders_cache_key current_user.pk %}
+            <div>
+                <ul>
+                    {% for order in orders %}
+                       <li>
+                            {{ order }}
+                           <ul>
+                               {% for product in order.products.all %}
+                               <li>
+                                   {{ product }}
+                               </li>
+                               {% endfor %}
+                           </ul>
+
+                       </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endcache %}
+    {% else %}
+        <h1>User {% firstof current_user.first_name current_user.username %} don't have orders </h1>
+    {% endif  %}
+{% endblock %}

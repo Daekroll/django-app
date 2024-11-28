@@ -1,0 +1,20 @@
+{% extends 'shopapp/base.html' %}
+
+{% block title %}
+Arcive Product
+{% endblock %}
+
+{% block body %}
+
+<h1>Вы уверены что хотите удалить {{product.name}}?</h1>
+<div>
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">Delete</button>
+    </form>
+</div>
+<div>
+    <a href="{% url 'shopapp:product_detail' pk=product.id %}">back_to_product</a>
+</div>
+{% endblock %}

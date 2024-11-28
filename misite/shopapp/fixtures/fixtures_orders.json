@@ -1,0 +1,47 @@
+[
+  {
+    "model": "shopapp.order",
+    "pk": 1,
+    "fields": {
+      "address": "Lenina 10",
+      "comment": "kod 123",
+      "create_date": "2024-11-04T10:25:36.968Z",
+      "user": 1,
+      "promocode": "",
+      "products": [
+        5,
+        7
+      ]
+    }
+  },
+  {
+    "model": "shopapp.order",
+    "pk": 2,
+    "fields": {
+      "address": "lenina 10",
+      "comment": "2 °Єєър",
+      "create_date": "2024-11-08T10:37:39.684Z",
+      "user": 1,
+      "promocode": "ROTPER24/7",
+      "products": [
+        8
+      ]
+    }
+  },
+  {
+    "model": "shopapp.order",
+    "pk": 3,
+    "fields": {
+      "address": "lenina 10",
+      "comment": "test",
+      "create_date": "2024-11-08T10:38:32.336Z",
+      "user": 1,
+      "promocode": "ROTPER24/7",
+      "products": [
+        5,
+        7,
+        8
+      ]
+    }
+  }
+]

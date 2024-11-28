@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        {% block title %}
+            Base Title
+        {% endblock %}
+    </title>
+</head>
+<body>
+    {% include 'shopapp/urls_list.html' %}
+    {% block body %}
+        <h1>Base body</h1>
+    {% endblock %}<br>
+    <p>
+        {% now 'H:i' %}
+    </p>
+    {% now 'l' as current_weekday%}
+    <p>
+        Today is {{ current_weekday }}
+    </p>
+</body>
+</html>
+

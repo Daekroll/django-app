@@ -1,0 +1,22 @@
+{% extends 'rare_loading_file/base.html' %}
+
+
+{% block title %}
+File upload
+{% endblock %}
+
+{% block body %}
+{% if big_file  %}
+<p>{{ big_file }}</p>
+{% endif %}
+
+<h1>Upload file</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p>
+        <input type="file" name="my_file">
+    </p>
+
+    <button type="submit">Upload</button>
+</form>
+{% endblock %}

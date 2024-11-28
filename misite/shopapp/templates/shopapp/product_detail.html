@@ -1,0 +1,40 @@
+{% extends 'shopapp/base.html' %}
+{% load i18n %}
+
+{% block title %}
+{% translate 'Product detail' %}
+{% endblock %}
+
+{% block body %}
+
+<h1>{% translate 'Product' %} # {{product.id}}:</h1>
+<div>
+
+    <p>{% translate 'Product name' %}: {{ product.name }}</p>
+    <p>{% translate 'Description' %}: {{product.description}}</p>
+    <p>{% translate 'Price' %}: {{product.price}}</p>
+    {% if product.discount %}
+        <p>{% translate 'Discount' %}: {{product.discount}}</p>
+    {% else %}
+        <p>{% translate 'No discount' %}</p>
+    {% endif%}
+
+    {% blocktranslate count product_count=product.count %}
+        There is one product.name
+        {% plural %}
+        There are {{ product_count }} products
+    {% endblocktranslate %}
+
+    <p>{% translate 'Is archive' %}: {{product.is_archive}}</p>
+    <p>{% translate 'Created by' %}: {{product.created_by}}</p>
+
+</div>
+{% url 'shopapp:product_list' as product_list %}
+{% url 'shopapp:product_update' pk=product.id as product_update %}
+{% url 'shopapp:product_archive' pk=product.id as product_archive %}
+{% blocktranslate %}
+    <a href="{{ product_list }}">back to products</a><br>
+    <a href="{{ product_update }}">update_product</a><br>
+    <a href="{{ product_archive }}">product_archive</a>
+{% endblocktranslate %}
+{% endblock %}

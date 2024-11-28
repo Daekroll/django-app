@@ -1,0 +1,24 @@
+{% extends 'shopapp/base.html' %}
+
+
+{% block title %}
+Order list
+{% endblock %}
+
+{% block body %}
+
+<h1>Order list:</h1>
+<ol>
+
+    {% for order in orders %}
+    <a href="{% url 'shopapp:order_detail' pk=order.id%}">Order # {{order.id}}</a>
+    <li>Order delivery address: {{ order.address }} for {{ order.user }}</li>
+
+    <br>
+
+
+    {% endfor %}
+
+</ol>
+
+{% endblock %}
